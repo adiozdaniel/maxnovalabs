@@ -15,7 +15,7 @@ import { PreloaderComponent } from './core/preloader/preloader.component';
     PreloaderComponent,
   ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   title = 'maxnovalabs';
