@@ -14,6 +14,7 @@ import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { ServicesComponent } from './pages/services/services.component';
+import { FaqComponent } from './pages/faq/faq.component';
 
 @Component({
   selector: 'app-root',
@@ -29,6 +30,7 @@ import { ServicesComponent } from './pages/services/services.component';
     AboutComponent,
     ContactComponent,
     ServicesComponent,
+    FaqComponent,
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
