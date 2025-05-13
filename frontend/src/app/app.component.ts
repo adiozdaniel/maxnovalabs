@@ -10,6 +10,7 @@ import { FooterComponent } from './core/footer/footer.component';
 import { ScrollTopComponent } from './core/scroll-top/scroll-top.component';
 import { PreloaderComponent } from './core/preloader/preloader.component';
 import { HomeComponent } from './pages/home/home.component';
+import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 
 @Component({
   selector: 'app-root',
@@ -21,6 +22,7 @@ import { HomeComponent } from './pages/home/home.component';
     ScrollTopComponent,
     PreloaderComponent,
     HomeComponent,
+    PortfolioComponent,
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
