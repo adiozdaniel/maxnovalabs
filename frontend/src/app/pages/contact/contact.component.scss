@@ -1,0 +1,103 @@
+/* Section General Styling */
+.contact {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+}
+
+.contact-container {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* Contact Form */
+.contact-form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 50px;
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.contact-form .form-control {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.contact-form .submit-btn {
+  background-color: #0066cc;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.contact-form .submit-btn:hover {
+  background-color: #005bb5;
+}
+
+/* Contact Information */
+.contact-details {
+  text-align: center;
+}
+
+.contact-details h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.contact-info li {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.contact-info li i {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.contact-info li a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.contact-info li a:hover {
+  text-decoration: underline;
+}
+
+/* Social Media Links */
+.social-links {
+  text-align: center;
+}
+
+.social-links a {
+  font-size: 30px;
+  margin: 0 15px;
+  color: #666;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: #0066cc;
+}
