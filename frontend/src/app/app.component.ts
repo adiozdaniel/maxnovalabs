@@ -11,6 +11,7 @@ import { ScrollTopComponent } from './core/scroll-top/scroll-top.component';
 import { PreloaderComponent } from './core/preloader/preloader.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PortfolioComponent } from './pages/portfolio/portfolio.component';
+import { AboutComponent } from './pages/about/about.component';
 
 @Component({
   selector: 'app-root',
@@ -23,6 +24,7 @@ import { PortfolioComponent } from './pages/portfolio/portfolio.component';
     PreloaderComponent,
     HomeComponent,
     PortfolioComponent,
+    AboutComponent,
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
