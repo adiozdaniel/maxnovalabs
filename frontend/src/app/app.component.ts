@@ -12,6 +12,7 @@ import { PreloaderComponent } from './core/preloader/preloader.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 import { AboutComponent } from './pages/about/about.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 @Component({
   selector: 'app-root',
@@ -25,6 +26,7 @@ import { AboutComponent } from './pages/about/about.component';
     HomeComponent,
     PortfolioComponent,
     AboutComponent,
+    ContactComponent,
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
