@@ -1,0 +1,15 @@
+<div class="faq-container">
+  <div
+    class="faq-item"
+    *ngFor="let faq of faqs; let i = index"
+    [class.active]="activeIndex === i"
+  >
+    <button class="faq-question" (click)="toggle(i)">
+      {{ faq.question }}
+      <span class="arrow" [class.open]="activeIndex === i">▼</span>
+    </button>
+    <div class="faq-answer" *ngIf="activeIndex === i">
+      {{ faq.answer }}
+    </div>
+  </div>
+</div>
