@@ -1,0 +1,11 @@
+<div class="logos-carousel">
+  <div class="logos-track">
+    <div class="logo-item" *ngFor="let logo of logos">
+      <img [src]="logo" alt="Client Logo" />
+    </div>
+    <!-- duplicate for seamless loop -->
+    <div class="logo-item" *ngFor="let logo of logos">
+      <img [src]="logo" alt="Client Logo" />
+    </div>
+  </div>
+</div>
