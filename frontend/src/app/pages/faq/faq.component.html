@@ -1,6 +1,5 @@
 <section id="faq" class="faq section-bg" data-aos="fade-up">
   <div class="container">
-    
     <!-- FAQ Section Header -->
     <app-section-title
       title="Frequently Asked Questions"
@@ -8,33 +7,7 @@
       alignment="center"
     ></app-section-title>
 
-    <div class="faq-list">
-      <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
-        <h4 class="faq-question">What services do you offer?</h4>
-        <p class="faq-answer">
-          We provide a wide range of services including AI solutions, cloud
-          infrastructure management, and healthcare technology innovation.
-        </p>
-      </div>
-
-      <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
-        <h4 class="faq-question">How can I contact customer support?</h4>
-        <p class="faq-answer">
-          You can reach out to our customer support team via email at
-          support&#64;company.com or through our contact page.
-        </p>
-      </div>
-
-      <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
-        <h4 class="faq-question">What is your return policy?</h4>
-        <p class="faq-answer">
-          We offer a 30-day return policy on all services. If you're not
-          satisfied with the service, you can request a full refund within 30
-          days of purchase.
-        </p>
-      </div>
-
-      <!-- TODO: Add more FAQ items -->
-    </div>
+    <!-- Dynamic FAQ Accordion -->
+    <app-faq-accordion [faqs]="faqItems"></app-faq-accordion>
   </div>
 </section>
