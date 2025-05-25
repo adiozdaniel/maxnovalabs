@@ -1,0 +1,19 @@
+<div class="portfolio-filters">
+  <button
+    *ngFor="let category of allCategories"
+    (click)="selectCategory(category)"
+    [class.active]="selectedCategory === category"
+  >
+    {{ category }}
+  </button>
+</div>
+
+<div class="portfolio-grid">
+  <div class="portfolio-card" *ngFor="let item of filteredItems">
+    <img [src]="item.image" [alt]="item.title" />
+    <div class="portfolio-info">
+      <h4>{{ item.title }}</h4>
+      <p>{{ item.description }}</p>
+    </div>
+  </div>
+</div>

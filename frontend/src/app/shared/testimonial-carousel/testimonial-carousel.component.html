@@ -1,0 +1,23 @@
+<!-- Testimonial Carousel -->
+<section class="testimonial-section">
+  <div class="testimonial-wrapper" *ngIf="testimonials.length > 0">
+    <div class="testimonial" *ngIf="testimonials[currentIndex]">
+      <img
+        *ngIf="testimonials[currentIndex].image"
+        [src]="testimonials[currentIndex].image"
+        [alt]="testimonials[currentIndex].name"
+        class="testimonial-img"
+      />
+      <blockquote class="testimonial-quote">
+        “{{ testimonials[currentIndex].quote }}”
+      </blockquote>
+      <p class="testimonial-name">{{ testimonials[currentIndex].name }}</p>
+      <small class="testimonial-title">{{ testimonials[currentIndex].title }}</small>
+    </div>
+
+    <div class="testimonial-controls">
+      <button (click)="prev()">←</button>
+      <button (click)="next()">→</button>
+    </div>
+  </div>
+</section>
