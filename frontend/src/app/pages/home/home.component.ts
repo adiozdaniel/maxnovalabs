@@ -21,13 +21,13 @@ export class HomeComponent {
       name: 'Jane Doe',
       title: 'CEO, HealthTech',
       quote: 'MaxNovaLabs transformed our diagnostics pipeline with AI.',
-      image: 'assets/img/testimonials/jane.jpg',
+      image: 'img/testimonials/jane.jpg',
     },
     {
       name: 'John Smith',
       title: 'CTO, Cloudify',
       quote: 'Scalable infrastructure, delivered on time. Excellent team!',
-      image: 'assets/img/testimonials/john.jpg',
+      image: 'img/testimonials/john.jpg',
     },
   ];
 
