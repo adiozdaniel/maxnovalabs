@@ -4,11 +4,24 @@
     *ngFor="let faq of faqs; let i = index"
     [class.active]="activeIndex === i"
   >
-    <button class="faq-question" (click)="toggle(i)">
+    <button
+      class="faq-question"
+      (click)="toggle(i)"
+      [attr.aria-expanded]="activeIndex === i"
+      [attr.aria-controls]="'faq-answer-' + i"
+      id="faq-question-{{ i }}"
+    >
       {{ faq.question }}
       <span class="arrow" [class.open]="activeIndex === i">▼</span>
     </button>
-    <div class="faq-answer" *ngIf="activeIndex === i">
+
+    <div
+      class="faq-answer"
+      *ngIf="activeIndex === i"
+      [attr.id]="'faq-answer-' + i"
+      role="region"
+      [attr.aria-labelledby]="'faq-question-' + i"
+    >
       {{ faq.answer }}
     </div>
   </div>
