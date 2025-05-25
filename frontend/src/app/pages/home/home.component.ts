@@ -1,16 +1,12 @@
 import { Component } from '@angular/core';
 import { SectionTitleComponent } from '../../shared/section-title/section-title.component';
 import { Testimonial } from '../../shared/models/testimonial.model';
-import { TestimonialCarouselComponent } from '../../shared/testimonial-carousel/testimonial-carousel.component';
-import { ClientLogosCarouselComponent } from '../../shared/client-logos-carousel/client-logos-carousel.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [
     SectionTitleComponent,
-    TestimonialCarouselComponent,
-    ClientLogosCarouselComponent,
   ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],

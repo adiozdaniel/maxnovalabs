@@ -1,0 +1,36 @@
+.top-bar {
+  font-size: 0.875rem;
+  padding: 0.5rem 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1f2937;
+  color: #f3f4f6;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  i {
+    margin-right: 0.25rem;
+    color: #f3f4f6;
+
+    &:hover {
+      color: #ff5722;
+    }
+  }
+
+  a {
+    color: #f3f4f6;
+    text-decoration: none;
+
+    &:hover {
+      color: #ff5722;
+    }
+  }
+}
