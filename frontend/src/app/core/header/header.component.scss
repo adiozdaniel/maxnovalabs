@@ -1,4 +1,10 @@
 .header {
-  display: flex;
-  flex-direction: column;
+  position: relative;
+  z-index: 1000;
+
+  app-main-nav.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }  
 }
