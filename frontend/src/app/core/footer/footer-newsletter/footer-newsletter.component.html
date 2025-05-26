@@ -1,10 +1,24 @@
 <div class="footer-newsletter">
   <div class="container">
     <h2>Join Our Newsletter</h2>
-    <p>Stay updated with the latest sofware development, AI, mobile apps, and startup trends from MaxNovaLabs insights.</p>
-    <form class="newsletter-form">
-      <input type="email" placeholder="Enter your email" required />
+    <p>
+      Stay updated with the latest software development, AI, mobile apps, and
+      startup trends from MaxNovaLabs insights.
+    </p>
+
+    <form class="newsletter-form" (submit)="onSubscribe($event)">
+      <input
+        type="email"
+        placeholder="Enter your email"
+        [(ngModel)]="email"
+        name="email"
+        required
+      />
       <button type="submit">Subscribe</button>
     </form>
+
+    <p class="message" *ngIf="message" [class.success]="success" [class.error]="!success">
+      {{ message }}
+    </p>
   </div>
 </div>

@@ -52,6 +52,19 @@
     }
   }
 
+  .message {
+    margin-top: 1rem;
+    font-weight: 500;
+  
+    &.success {
+      color: #2e7d32;
+    }
+  
+    &.error {
+      color: #d32f2f;
+    }
+  }  
+
   @media (max-width: 600px) {
     .newsletter-form {
       flex-direction: column;
