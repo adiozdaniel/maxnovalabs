@@ -1,0 +1,16 @@
+.clients-section {
+  padding: 4rem 2rem;
+  background-color: #fff;
+  text-align: center;
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+  }
+
+  app-testimonial-carousel,
+  app-client-logos-carousel {
+    margin-top: 2rem;
+  }
+}

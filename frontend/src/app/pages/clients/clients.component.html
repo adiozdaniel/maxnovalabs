@@ -1,1 +1,9 @@
-<p>clients works!</p>
+<section id="clients" class="clients-section">
+  <h2 class="section-title">What Our Clients Say</h2>
+  <app-testimonial-carousel
+    [testimonials]="testimonials"
+  ></app-testimonial-carousel>
+
+  <h2 class="section-title">Trusted By</h2>
+  <app-client-logos-carousel [logos]="clientLogos"></app-client-logos-carousel>
+</section>
