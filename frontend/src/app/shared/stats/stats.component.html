@@ -1,14 +1,12 @@
 <section id="stats" class="stats section">
-  <div class="stats-container" data-aos="fade-up" data-aos-delay="100">
-    <div class="stat-item" *ngFor="let stat of stats; let i = index" [attr.data-aos-delay]="100 + (i * 100)">
-      <i [class]="stat.icon"></i>
-      <div class="stat-info">
-        <span class="purecounter" 
-              [attr.data-purecounter-start]="0" 
-              [attr.data-purecounter-end]="stat.value" 
-              data-purecounter-duration="1">
-        </span>
-        <p>{{ stat.label }}</p>
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="stats-wrapper">
+      <div class="stat-item" *ngFor="let stat of stats">
+        <i [class]="stat.icon"></i>
+        <div class="stats-content">
+          <span>{{ stat.current }}</span>
+          <p>{{ stat.label }}</p>
+        </div>
       </div>
     </div>
   </div>
