@@ -15,6 +15,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { ServicesComponent } from './pages/services/services.component';
 import { FaqComponent } from './pages/faq/faq.component';
+import { StatsComponent } from "./shared/stats/stats.component";
 
 @Component({
   selector: 'app-root',
@@ -31,7 +32,8 @@ import { FaqComponent } from './pages/faq/faq.component';
     ContactComponent,
     ServicesComponent,
     FaqComponent,
-  ],
+    StatsComponent
+],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
