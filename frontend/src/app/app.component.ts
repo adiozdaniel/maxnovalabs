@@ -17,6 +17,7 @@ import { ServicesComponent } from './pages/services/services.component';
 import { FaqComponent } from './pages/faq/faq.component';
 import { StatsComponent } from "./shared/stats/stats.component";
 import { ClientsComponent } from "./pages/clients/clients.component";
+import { TeamComponent } from "./pages/team/team.component";
 
 @Component({
   selector: 'app-root',
@@ -34,7 +35,8 @@ import { ClientsComponent } from "./pages/clients/clients.component";
     ServicesComponent,
     FaqComponent,
     StatsComponent,
-    ClientsComponent
+    ClientsComponent,
+    TeamComponent
 ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
