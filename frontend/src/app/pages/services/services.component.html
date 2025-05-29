@@ -14,9 +14,16 @@
         [attr.data-aos-delay]="(i + 1) * 100"
       >
         <div class="icon">
-          <i [class]="'bi ' + service.icon"></i>
+          <i [class]="service.icon"></i>
         </div>
-        <h4><a href="#" class="stretched-link">{{ service.title }}</a></h4>
+        <button
+          type="button"
+          class="stretched-link"
+          [attr.aria-label]="'View more about ' + service.title"
+        >
+          {{ service.title }}
+        </button>
+
         <p>{{ service.description }}</p>
       </div>
     </div>
