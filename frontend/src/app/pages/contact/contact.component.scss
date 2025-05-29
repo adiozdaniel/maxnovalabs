@@ -17,7 +17,7 @@
       font-size: 18px;
       span.description-title {
         font-weight: 600;
-        color: #0d6efd;
+        color: #ff5722;
       }
     }
   }
@@ -46,7 +46,7 @@
 
       i {
         font-size: 24px;
-        color: #0d6efd;
+        color: #ff5722;
         margin-top: 4px;
       }
 
@@ -126,7 +126,7 @@
         button {
           padding: 10px 24px;
           font-size: 16px;
-          background-color: #0d6efd;
+          background-color: #ff5722;
           color: #fff;
           border: none;
           border-radius: 4px;
@@ -134,7 +134,8 @@
           transition: background 0.3s ease;
 
           &:hover {
-            background-color: #084cdf;
+            background-color: #1f2937;
+            color: #fff;
           }
         }
       }
