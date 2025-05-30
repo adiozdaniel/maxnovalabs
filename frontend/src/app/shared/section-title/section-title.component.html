@@ -1,4 +1,4 @@
 <div class="section-header" [ngClass]="alignment" data-aos="fade-up">
-  <h2>{{ title }}</h2>
-  <p *ngIf="subtitle">{{ subtitle }}</p>
+  <h2 [attr.data-text]="title">{{ title }}</h2>
+  <p *ngIf="subtitle" >{{ subtitle }}</p>
 </div>
