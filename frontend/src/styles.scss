@@ -1,9 +1,72 @@
-* {
+/* ==================== */
+/*      CSS RESET       */
+/* ==================== */
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ==================== */
+/* ==================== */
+/*   ROOT VARIABLES     */
+/* ==================== */
+:root {
+  /* Font Families */
+  --font-family: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  /* Brand Color Palette */
+  --brand-ink: #1f2937; /* Primary dark color */
+  --brand-fire: #ff5722; /* Primary accent color */
+  --brand-paper: #fff; /* Pure white */
+  --brand-mist: #ffffff9f; /* Translucent white */
+
+  /* Base Variables */
+  --line-height-base: 1.5;
+  --text-color: var(--brand-ink);
+  --body-bg: var(--brand-paper);
+}
+
+/* ==================== */
+/*      BASE STYLES      */
+/* ==================== */
 html {
   scroll-behavior: smooth;
+
+  /* Improve text rendering */
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: var(--font-family);
+  line-height: var(--line-height-base);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* ==================== */
+/*   ACCESSIBILITY      */
+/* ==================== */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Screen reader only utility class */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
