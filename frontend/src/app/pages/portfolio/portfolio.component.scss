@@ -1,116 +1,111 @@
-#portfolio {
-  background-color: #f4f4f4;
-  padding: 60px 20px;
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
 
-  .section-header {
-    text-align: center;
-    margin-bottom: 40px;
-
-    h2 {
-      font-size: 32px;
-      font-weight: 700;
-      color: #222;
-    }
-
-    p {
-      font-size: 16px;
-      color: #555;
-      max-width: 600px;
-      margin: 10px auto 0;
-    }
+  h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #222;
   }
 
-  .portfolio-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
+  p {
+    font-size: 16px;
+    color: #555;
+    max-width: 600px;
+    margin: 10px auto 0;
+  }
+}
+
+.portfolio-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.portfolio-item {
+  width: 100%;
+
+  @media (min-width: 768px) {
+    width: 48%;
   }
 
-  .portfolio-item {
-    width: 100%;
+  @media (min-width: 992px) {
+    width: 30%;
+  }
 
-    @media (min-width: 768px) {
-      width: 48%;
-    }
+  .portfolio-wrap {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
 
-    @media (min-width: 992px) {
-      width: 30%;
-    }
-
-    .portfolio-wrap {
-      position: relative;
-      overflow: hidden;
-      border-radius: 12px;
-      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease-in-out;
-
-      &:hover {
-        transform: scale(1.02);
-
-        .portfolio-info {
-          opacity: 1;
-          visibility: visible;
-        }
-      }
-
-      img {
-        display: block;
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        border-radius: 12px;
-      }
+    &:hover {
+      transform: scale(1.02);
 
       .portfolio-info {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: rgba(0, 0, 0, 0.75);
-        color: #fff;
-        padding: 20px;
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s ease-in-out;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
 
-        h4 {
-          margin: 0 0 5px;
-          font-size: 18px;
-        }
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 12px;
+    }
 
-        p {
-          margin: 0;
-          font-size: 14px;
-          color: #ccc;
-        }
+    .portfolio-info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.75);
+      color: #fff;
+      padding: 20px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease-in-out;
 
-        .portfolio-links {
-          margin-top: 10px;
+      h4 {
+        margin: 0 0 5px;
+        font-size: 18px;
+      }
+
+      p {
+        margin: 0;
+        font-size: 14px;
+        color: #ccc;
+      }
+
+      .portfolio-links {
+        margin-top: 10px;
+        display: flex;
+        gap: 10px;
+
+        a {
+          width: 32px;
+          height: 32px;
           display: flex;
-          gap: 10px;
+          align-items: center;
+          justify-content: center;
+          background: rgba(255, 255, 255, 0.2);
+          color: #fff;
+          border-radius: 50%;
+          font-size: 16px;
+          text-decoration: none;
+          transition: background 0.3s;
 
-          a {
-            width: 32px;
-            height: 32px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(255, 255, 255, 0.2);
-            color: #fff;
-            border-radius: 50%;
-            font-size: 16px;
-            text-decoration: none;
-            transition: background 0.3s;
+          &:hover {
+            background: #fff;
+            color: #000;
+          }
 
-            &:hover {
-              background: #fff;
-              color: #000;
-            }
-
-            i {
-              font-style: normal; // TODO: to replace icons with branded SVG
-            }
+          i {
+            font-style: normal; // TODO: to replace icons with branded SVG
           }
         }
       }
