@@ -72,10 +72,22 @@ body {
 }
 
 .section-container {
-  background: var(--bg-gradient);
+  position: relative;
   padding: 2rem 1rem;
-  box-shadow: var(--light-shadow);
+  background: var(--bg-gradient);
   color: var(--text-color);
+  overflow: hidden;
+
+  // Top tapered border
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1.5px;
+    background: var(--bg-gradient);
+  }
 }
 
 .glb-button {
