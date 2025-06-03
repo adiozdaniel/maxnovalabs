@@ -57,6 +57,23 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 
+/* ==================== */
+/*    DARK-THEME OVERRIDES   */
+/* ==================== */
+body.dark-theme {
+  /* Invert or override as desired */
+  --brand-ink: #ff5722; /* Primary accent color */
+  --brand-fire: #1f2937; /* Primary dark color */
+  --brand-paper: #fff; /* Pure white */
+  --brand-mist: #ffffff9f; /* Translucent white */
+  --bg-gradient: radial-gradient(
+    ellipse at center,
+    rgba(31, 41, 55, 0.8) 0%,
+    rgba(31, 41, 55, 0.6) 40%,
+    rgba(31, 41, 55, 0.4) 100%
+  );
+}
+
 body {
   font-family: var(--font-family);
   line-height: var(--line-height-base);
