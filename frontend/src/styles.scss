@@ -30,6 +30,7 @@
   --text-color: var(--brand-ink);
   --body-bg: var(--brand-paper);
   --light-shadow: 1px 2px 2px 2px rgba(0, 0, 0, 0.202);
+  --line-color: var(--brand-fire);
 
   /* Gradient Color Variables */
   --gradient-start: #c8cfdc9d; /* 0% position */
@@ -75,6 +76,22 @@ body {
   padding: 2rem 1rem;
   box-shadow: var(--light-shadow);
   color: var(--text-color);
+}
+
+.glb-button {
+  display: inline-block;
+  background-color: var(--brand-ink);
+  color: var(--brand-paper);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  box-shadow: var(--light-shadow);
+
+  &:hover {
+    background-color: var(--line-color);
+  }
 }
 
 /* Screen reader only utility class */
