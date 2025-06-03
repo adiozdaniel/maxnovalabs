@@ -17,5 +17,12 @@
       </li>
       <li><a routerLink="/contact">Contact</a></li>
     </ul>
+      <!-- Theme Toggle Button -->
+  <button class="glb-button" (click)="toggleTheme()" aria-label="Toggle Dark/Light Theme">
+    <i [ngClass]="isDark ? 'fas fa-sun' : 'fas fa-moon'"></i>
+    <span class="sr-only">
+      {{ isDark ? 'Switch to light theme' : 'Switch to dark theme' }}
+    </span>
+  </button>
   </nav>
 </div>
