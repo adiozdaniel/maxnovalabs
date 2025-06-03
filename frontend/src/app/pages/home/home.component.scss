@@ -85,10 +85,20 @@ p {
   color: #333;
 }
 
+.hero-col {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
 /* Call-to-Action Buttons */
 .btn-get-started {
+  position: relative;
   padding: 0.75rem 1.5rem;
   border-radius: 4px;
+  width: 20rem;
 }
 
 .btn-watch-video {
