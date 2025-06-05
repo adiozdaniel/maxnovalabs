@@ -4,8 +4,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #1f2937;
-  color: #f3f4f6;
+  background-color: var(--button-bg);
+  color: var(--button-text);
 
   ul {
     list-style: none;
@@ -18,19 +18,10 @@
 
   i {
     margin-right: 0.25rem;
-    color: #f3f4f6;
+    color: var(--button-text);
 
     &:hover {
-      color: #ff5722;
-    }
-  }
-
-  a {
-    color: #f3f4f6;
-    text-decoration: none;
-
-    &:hover {
-      color: #ff5722;
+      color: var(--text-secondary-color);
     }
   }
 }
