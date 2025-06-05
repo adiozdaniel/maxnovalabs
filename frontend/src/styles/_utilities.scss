@@ -27,9 +27,6 @@
 }
 
 .glb-button {
-  --button-bg: var(--color-ink);
-  --button-text: var(--color-paper);
-
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -46,7 +43,8 @@
   border: none;
 
   &:hover {
-    --button-bg: var(--color-fire);
+    background-color: var(--button-hover-bg);
+    color: var(--button-hover-text);
     transform: translateY(-1px);
   }
 
@@ -55,8 +53,6 @@
   }
 
   &--outline {
-    --button-bg: transparent;
-    --button-text: var(--color-ink);
     border: 1px solid currentColor;
   }
 }

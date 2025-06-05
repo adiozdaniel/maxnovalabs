@@ -17,7 +17,7 @@
   --color-paper-rgb: 255, 255, 255;
   --color-ink-rgb: 31, 41, 55;
   --color-fire-rgb: 255, 87, 34;
-  --color-dark-blue-900-rgb: 15, 23, 42; /* NEW */
+  --color-dark-blue-900-rgb: 15, 23, 42;
 
   // Extended Color Palette
   --color-light-gray: #e2e8f0;
@@ -27,6 +27,10 @@
   // Semantic Colors
   --text-color: var(--color-ink);
   --color-body-bg: var(--color-paper);
+  --button-bg: var(--color-ink);
+  --button-text: var(--color-paper);
+  --button-hover-bg: var(--color-fire);
+  --button-hover-text: var(--color-ink);
 
   // Typography
   --line-height-base: 1.5;
