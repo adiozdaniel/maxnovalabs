@@ -9,6 +9,7 @@
   color: var(--text-color);
   padding: 3rem 1rem;
   isolation: isolate;
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 
   &::before {
     content: "";
