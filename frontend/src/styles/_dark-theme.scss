@@ -6,15 +6,12 @@
   :root {
     // Text and Background flips
     --text-color: var(--color-paper);
+    --text-secondary-color: var(--color-paper);
     --color-body-bg: var(--color-dark-blue-900);
     --button-bg: var(--color-fire);
     --button-text: var(--color-ink);
     --button-hover-bg: var(--color-ink);
     --button-hover-text: var(--color-fire);
-
-    // Brand color adjustments in dark mode
-    --color-ink: var(--color-light-gray);
-    --color-fire: var(--color-orange-400);
 
     // Dark theme gradient adjustments
     --gradient-dark-opacity-top: 0.8;
