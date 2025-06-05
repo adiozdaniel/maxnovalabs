@@ -1,0 +1,30 @@
+/* ==================== */
+/*    DARK THEME        */
+/* ==================== */
+@use "variables" as v;
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    // Text Colors
+    --text-color: var(--color-paper);
+
+    // Brand Colors
+    --color-ink: var(--color-light-gray);
+    --color-fire: var(--color-orange-400);
+
+    // Backgrounds
+    --color-body-bg: var(--color-dark-blue-900);
+
+    // Gradients
+    --gradient-primary: radial-gradient(
+      ellipse at center,
+      var(--color-dark-blue-800) 0%,
+      var(--color-dark-blue-700) 40%,
+      var(--color-dark-blue-600) 100%
+    );
+  }
+
+  body {
+    background-color: var(--color-body-bg);
+  }
+}
