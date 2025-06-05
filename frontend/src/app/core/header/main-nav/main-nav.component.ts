@@ -17,7 +17,6 @@ import { HttpClient } from '@angular/common/http';
 })
 export class MainNavComponent implements OnInit, OnDestroy {
   isDark = false;
-  showToggle = true;
 
   private isBrowser: boolean;
   private backendHasPreference = false;
@@ -53,7 +52,6 @@ export class MainNavComponent implements OnInit, OnDestroy {
       if (resp && (resp.theme === 'dark' || resp.theme === 'light')) {
         this.backendHasPreference = true;
         this.applyTheme(resp.theme === 'dark');
-        this.showToggle = true;
       } else {
         this.backendHasPreference = false;
         this.listenToSystemPreference();
@@ -69,11 +67,9 @@ export class MainNavComponent implements OnInit, OnDestroy {
     const systemPrefersDark = this.systemMediaQuery.matches;
 
     this.applyTheme(systemPrefersDark);
-    this.showToggle = !systemPrefersDark;
     this.mediaListener = (e: MediaQueryListEvent) => {
       if (!this.backendHasPreference) {
         this.applyTheme(e.matches);
-        this.showToggle = !e.matches;
       }
     };
     this.systemMediaQuery.addEventListener('change', this.mediaListener);
