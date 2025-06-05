@@ -1,5 +1,5 @@
 /* ==================== */
-/*      DESIGN TOKENS    */
+/*      DESIGN TOKENS   */
 /* ==================== */
 :root {
   // Font Families
@@ -7,18 +7,21 @@
     "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
-  // Base Colors
+  // Base Colors (RGB format for blending)
   --color-paper: #fff;
   --color-ink: #1f2937;
   --color-fire: #ff5722;
   --color-mist: #ffffff9f;
 
+  // RGB conversions for gradient blending
+  --color-paper-rgb: 255, 255, 255;
+  --color-ink-rgb: 31, 41, 55;
+  --color-fire-rgb: 255, 87, 34;
+  --color-dark-blue-900-rgb: 15, 23, 42; /* NEW */
+
   // Extended Color Palette
   --color-light-gray: #e2e8f0;
   --color-orange-400: #f97316;
-  --color-dark-blue-600: rgba(31, 41, 55, 0.4);
-  --color-dark-blue-700: rgba(31, 41, 55, 0.6);
-  --color-dark-blue-800: rgba(31, 41, 55, 0.8);
   --color-dark-blue-900: #0f172a;
 
   // Semantic Colors
@@ -37,19 +40,17 @@
     transparent 100%
   );
 
-  // Gradients
-  --gradient-start: #c8cfdc9d;
-  --gradient-mid: #e0e1e39d;
-  --gradient-end: #f9f9ff9d;
+  // Light Theme Gradients
+  --gradient-light-opacity: 0.9;
   --gradient-primary: radial-gradient(
     ellipse at center,
-    var(--gradient-start) 0%,
-    var(--gradient-mid) 40%,
-    var(--gradient-end) 100%
+    rgba(var(--color-paper-rgb), var(--gradient-light-opacity)) 0%,
+    rgba(200, 207, 220, var(--gradient-light-opacity)) 40%,
+    rgba(var(--color-paper-rgb), var(--gradient-light-opacity)) 100%
   );
 }
 
-// Sass Variables for internal use
+// Breakpoints
 $breakpoints: (
   "sm": 576px,
   "md": 768px,
