@@ -1,0 +1,64 @@
+/* ==================== */
+/*      DESIGN TOKENS   */
+/* ==================== */
+:root {
+  // Font Families
+  --font-family: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  // Base Colors (RGB format for blending)
+  --color-paper: #fff;
+  --color-ink: #1f2937;
+  --color-fire: #ff5722;
+  --color-mist: #ffffff9f;
+
+  // RGB conversions for gradient blending
+  --color-paper-rgb: 255, 255, 255;
+  --color-ink-rgb: 31, 41, 55;
+  --color-fire-rgb: 255, 87, 34;
+  --color-dark-blue-900-rgb: 15, 23, 42;
+
+  // Extended Color Palette
+  --color-light-gray: #e2e8f0;
+  --color-orange-400: #f97316;
+  --color-dark-blue-900: #0f172a;
+
+  // Semantic Colors
+  --text-color: var(--color-ink);
+  --text-secondary-color: var(--color-fire);
+  --color-body-bg: var(--color-paper);
+  --button-bg: var(--color-ink);
+  --button-text: var(--color-paper);
+  --button-hover-bg: var(--color-fire);
+  --button-hover-text: var(--color-ink);
+
+  // Typography
+  --line-height-base: 1.5;
+
+  // Effects
+  --shadow-sm: 1px 2px 2px 2px rgba(0, 0, 0, 0.202);
+  --border-gradient: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--color-fire) 50%,
+    transparent 100%
+  );
+
+  // Light Theme Gradients
+  --gradient-light-opacity: 0.9;
+  --gradient-primary: radial-gradient(
+    ellipse at center,
+    rgba(var(--color-paper-rgb), var(--gradient-light-opacity)) 0%,
+    rgba(200, 207, 220, var(--gradient-light-opacity)) 40%,
+    rgba(var(--color-paper-rgb), var(--gradient-light-opacity)) 100%
+  );
+}
+
+// Breakpoints
+$breakpoints: (
+  "sm": 576px,
+  "md": 768px,
+  "lg": 992px,
+  "xl": 1200px,
+);

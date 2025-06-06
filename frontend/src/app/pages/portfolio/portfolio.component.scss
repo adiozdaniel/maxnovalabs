@@ -1,119 +1,135 @@
-#portfolio {
-  background-color: #f4f4f4;
-  padding: 60px 20px;
+.portfolio-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 300px));
+  justify-content: center;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 1rem auto;
+  padding: 20px 0;
+}
 
-  .section-header {
-    text-align: center;
-    margin-bottom: 40px;
+.portfolio-item {
+  aspect-ratio: 1/1;
+  transition: transform 0.3s ease;
 
-    h2 {
-      font-size: 32px;
-      font-weight: 700;
-      color: #222;
-    }
-
-    p {
-      font-size: 16px;
-      color: #555;
-      max-width: 600px;
-      margin: 10px auto 0;
-    }
+  &:hover {
+    transform: translateY(-10px);
   }
 
-  .portfolio-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
-  }
+  .portfolio-wrap {
+    position: relative;
+    height: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--light-shadow);
 
-  .portfolio-item {
-    width: 100%;
-
-    @media (min-width: 768px) {
-      width: 48%;
-    }
-
-    @media (min-width: 992px) {
-      width: 30%;
-    }
-
-    .portfolio-wrap {
-      position: relative;
-      overflow: hidden;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
       border-radius: 12px;
-      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease-in-out;
+    }
 
-      &:hover {
-        transform: scale(1.02);
+    .portfolio-info {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        0deg,
+        rgba(31, 41, 55, 0.941) 0%,
+        transparent 100%
+      );
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 25px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
 
-        .portfolio-info {
-          opacity: 1;
-          visibility: visible;
+      h4 {
+        position: relative;
+        color: var(--text-color);
+        font-size: 1.25rem;
+        margin-bottom: 8px;
+        transform: translateY(20px);
+        transition: transform 0.3s ease;
+
+        &::before {
+          content: attr(data-text);
+          position: absolute;
+          top: 0;
+          left: 0;
+          font-size: 1.25rem;
+          color: var(--white-color);
+          transform: translate(1.2px, 1.2px);
+          pointer-events: none;
+          white-space: nowrap;
         }
       }
 
-      img {
-        display: block;
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        border-radius: 12px;
+      p {
+        color: var(--white-color);
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+        transform: translateY(20px);
+        transition: transform 0.3s ease 0.1s;
       }
 
-      .portfolio-info {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: rgba(0, 0, 0, 0.75);
-        color: #fff;
-        padding: 20px;
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s ease-in-out;
+      .portfolio-links {
+        display: flex;
+        gap: 12px;
+        transform: translateY(20px);
+        transition: transform 0.3s ease 0.2s;
 
-        h4 {
-          margin: 0 0 5px;
-          font-size: 18px;
-        }
-
-        p {
-          margin: 0;
-          font-size: 14px;
-          color: #ccc;
-        }
-
-        .portfolio-links {
-          margin-top: 10px;
+        a {
           display: flex;
-          gap: 10px;
+          align-items: center;
+          justify-content: center;
+          width: 36px;
+          height: 36px;
+          text-decoration: none;
+          background: rgba(255, 255, 255, 0.2);
+          backdrop-filter: blur(5px);
+          border-radius: 50%;
+          color: white;
+          transition: all 0.3s ease;
 
-          a {
-            width: 32px;
-            height: 32px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(255, 255, 255, 0.2);
-            color: #fff;
-            border-radius: 50%;
-            font-size: 16px;
+          &:hover,
+          &:visited,
+          &:active {
             text-decoration: none;
-            transition: background 0.3s;
+          }
 
-            &:hover {
-              background: #fff;
-              color: #000;
-            }
-
-            i {
-              font-style: normal; // TODO: to replace icons with branded SVG
-            }
+          &:hover {
+            background: var(--brand-fire);
+            transform: scale(1.1);
           }
         }
       }
     }
+
+    &:hover {
+      img {
+        transform: scale(1.05);
+      }
+
+      .portfolio-info {
+        opacity: 1;
+
+        h4,
+        p,
+        .portfolio-links {
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .portfolio-container {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
   }
 }

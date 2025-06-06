@@ -1,0 +1,14 @@
+<section id="stats" class="section-container">
+  <p class="section-page-title">STATS</p>
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="stats-wrapper">
+      <div class="stat-item" *ngFor="let stat of stats">
+        <i [class]="stat.icon"></i>
+        <div class="stats-content">
+          <span>{{ stat.current }}</span>
+          <p>{{ stat.label }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

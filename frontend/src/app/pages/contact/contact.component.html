@@ -1,85 +1,102 @@
-<section id="contact" class="contact section-bg">
-  <div class="contact-container" data-aos="fade-up">
-    
-    <!-- Contact Header -->
-    <app-section-title
-      title="Contact Us"
-      subtitle="Have a question or want to collaborate? We'd love to hear from you."
-      alignment="center"
-    ></app-section-title>
+<section id="contact" class="section-container">
+  <!-- Contact Title -->
+  <app-section-title
+    titlePartOne="Contact"
+    titlePartTwo="NovaLabs"
+    subtitle="Let’s Build Together."
+    alignment="center"
+  ></app-section-title>
 
-    <!-- Contact Form Section -->
-    <form class="contact-form" method="post" action="submit_contact.php">
-      <div class="form-group">
-        <label for="name">Full Name</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          class="form-control"
-          placeholder="Your Full Name"
-          required
-        />
+  <div class="contact-container" data-aos="fade-up" data-aos-delay="100">
+    <div class="contact-wrapper">
+      <div class="contact-info">
+        <div class="info-item" data-aos="fade-up" data-aos-delay="200">
+          <i class="fas fa-map-marker-alt"></i>
+          <div>
+            <h3>Address</h3>
+            <p>Kisumu, Central, Kenya</p>
+          </div>
+        </div>
+
+        <div class="info-item" data-aos="fade-up" data-aos-delay="300">
+          <i class="fas fa-phone-alt"></i>
+          <div>
+            <h3>Call Us</h3>
+            <p>+254714749527</p>
+          </div>
+        </div>
+
+        <div class="info-item" data-aos="fade-up" data-aos-delay="400">
+          <i class="fas fa-envelope"></i>
+          <div>
+            <h3>Email Us</h3>
+            <p>info&#64;maxnovalabs.com</p>
+          </div>
+        </div>
+
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15954.480019478325!2d34.7548604!3d-0.1015624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182aa5f28df2c169%3A0x6c06e6be8f351b9a!2sKisumu%20Central%2C%20Kisumu%2C%20Kenya!5e0!3m2!1sen!2sus!4v1717000000000!5m2!1sen!2sus"
+          frameborder="0"
+          style="border: 0; width: 100%; height: 270px"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
       </div>
 
-      <div class="form-group">
-        <label for="email">Email Address</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          class="form-control"
-          placeholder="Your Email Address"
-          required
-        />
-      </div>
+      <div class="contact-form" data-aos="fade-up" data-aos-delay="200">
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="name-field">Your Name</label>
+              <input
+                type="text"
+                id="name-field"
+                formControlName="name"
+                required
+              />
+            </div>
 
-      <div class="form-group">
-        <label for="message">Message</label>
-        <textarea
-          id="message"
-          name="message"
-          class="form-control"
-          placeholder="Your Message"
-          rows="6"
-          required
-        ></textarea>
-      </div>
+            <div class="form-group">
+              <label for="email-field">Your Email</label>
+              <input
+                type="email"
+                id="email-field"
+                formControlName="email"
+                required
+              />
+            </div>
 
-      <button type="submit" class="submit-btn">Send Message</button>
-    </form>
+            <div class="form-group full-width">
+              <label for="subject-field">Subject</label>
+              <input
+                type="text"
+                id="subject-field"
+                formControlName="subject"
+                required
+              />
+            </div>
 
-    <!-- Contact Details Section -->
-    <div class="contact-details">
-      <h3>Our Contact Information</h3>
-      <p>
-        If you need immediate assistance, feel free to reach out to us directly:
-      </p>
+            <div class="form-group full-width">
+              <label for="message-field">Message</label>
+              <textarea
+                id="message-field"
+                rows="10"
+                formControlName="message"
+                required
+              ></textarea>
+            </div>
 
-      <ul class="contact-info">
-        <li>
-          <i class="bi bi-envelope"></i>
-          <span>Email: </span>
-          <a href="mailto:contact&#64;company.com">info&#64;maxnovalabs.com</a>
-        </li>
-
-        <li>
-          <i class="bi bi-phone"></i>
-          <span>Phone: </span><a href="tel:+1234567890">+254 714 749 527</a>
-        </li>
-        <li>
-          <i class="bi bi-geo-alt"></i>
-          <span>Address: </span>50400 - 1054, Kisumu, Kenya
-        </li>
-      </ul>
-
-      <!-- Social Media Links -->
-      <div class="social-links">
-        <h3>Follow Us</h3>
-        <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
-        <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
-        <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+            <div class="form-group full-width center">
+              <div *ngIf="loading" class="loading">Loading...</div>
+              <div *ngIf="error" class="error-message">{{ error }}</div>
+              <div *ngIf="success" class="sent-message">
+                Your message has been sent. Thank you!
+              </div>
+              <button type="submit" [disabled]="loading">Send Message</button>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
   </div>

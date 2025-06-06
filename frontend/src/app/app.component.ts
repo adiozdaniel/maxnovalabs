@@ -15,6 +15,9 @@ import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { ServicesComponent } from './pages/services/services.component';
 import { FaqComponent } from './pages/faq/faq.component';
+import { StatsComponent } from './shared/stats/stats.component';
+import { ClientsComponent } from './pages/clients/clients.component';
+import { TeamComponent } from './pages/team/team.component';
 
 @Component({
   selector: 'app-root',
@@ -31,13 +34,14 @@ import { FaqComponent } from './pages/faq/faq.component';
     ContactComponent,
     ServicesComponent,
     FaqComponent,
+    StatsComponent,
+    ClientsComponent,
+    TeamComponent,
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  title = 'maxnovalabs';
-
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
   ngOnInit(): void {
