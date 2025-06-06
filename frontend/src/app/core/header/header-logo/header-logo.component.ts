@@ -39,7 +39,7 @@ export class HeaderLogoComponent implements OnInit, AfterViewInit {
         'position',
         'absolute'
       );
-      this.renderer.setStyle(this.svgElement.nativeElement, 'top', '-65px');
+      this.renderer.setStyle(this.svgElement.nativeElement, 'top', '-40px');
       this.renderer.setStyle(this.svgElement.nativeElement, 'left', '0');
       this.renderer.setStyle(
         this.svgElement.nativeElement,
@@ -57,7 +57,7 @@ export class HeaderLogoComponent implements OnInit, AfterViewInit {
 
     const scrollY = window.scrollY || window.pageYOffset;
     const threshold = 44;
-    const newTop = scrollY > threshold ? '-80px' : '-65px';
+    const newTop = scrollY > threshold ? '-35px' : '-40px';
 
     this.renderer.setStyle(this.svgElement.nativeElement, 'top', newTop);
   }
