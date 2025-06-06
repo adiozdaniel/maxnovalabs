@@ -5,6 +5,16 @@
   width: 100vw;
   padding: 0 5rem;
 
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--border-gradient);
+    z-index: 1;
+  }
+
   .nav {
     display: flex;
     justify-content: space-between;
