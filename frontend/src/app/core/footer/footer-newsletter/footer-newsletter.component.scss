@@ -12,30 +12,30 @@
       padding: 0.5rem 1rem;
       width: 350px;
       max-width: 100%;
-      border: 1px solid #ddd;
+      border: 1px solid var(--button-bg);
       border-radius: 0.5rem 0 0 0.5rem;
       outline: none;
 
       &:focus {
-        border-color: #ff5722;
+        border-color: var(--button-bg);
         box-shadow: 0 0 0 2px rgba(255, 87, 34, 0.2);
       }
     }
 
     button {
       border-radius: 0 0.5rem 0.5rem 0;
-      background-color: #ff5722;
+      background-color: var(--button-bg);
       font-weight: 900;
       border: none;
-      color: #fff;
+      color: var(--button-hover-bg);
       padding: 0.5rem 1rem;
       margin-left: -8px;
       cursor: pointer;
       transition: background-color 0.3s ease;
 
       &:hover {
-        background-color: #f68765;
-        color: #1f2937;
+        background-color: var(--button-hover-bg);
+        color: var(--text-color);
       }
     }
   }
