@@ -56,3 +56,16 @@
     border: 1px solid currentColor;
   }
 }
+
+.section-page-title {
+  display: table;
+  margin: 0 auto;
+  padding: 0.1rem 0.3rem;
+  border-radius: 0.5rem;
+  background: var(--gradient-primary);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-color);
+  text-align: center;
+}
