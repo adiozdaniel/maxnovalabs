@@ -1,11 +1,11 @@
 <section id="contact" class="section-container">
-  <div class="section-title" data-aos="fade-up">
-    <h2>Contact</h2>
-    <p>
-      <span>Let’s Build Together </span>
-      <span class="description-title"> Contact MaxNovaLabs</span>
-    </p>
-  </div>
+  <!-- Contact Title -->
+  <app-section-title
+    titlePartOne="Contact"
+    titlePartTwo="NovaLabs"
+    subtitle="Let’s Build Together."
+    alignment="center"
+  ></app-section-title>
 
   <div class="contact-container" data-aos="fade-up" data-aos-delay="100">
     <div class="contact-wrapper">
@@ -49,24 +49,44 @@
           <div class="form-grid">
             <div class="form-group">
               <label for="name-field">Your Name</label>
-              <input type="text" id="name-field" formControlName="name" required />
+              <input
+                type="text"
+                id="name-field"
+                formControlName="name"
+                required
+              />
             </div>
-        
+
             <div class="form-group">
               <label for="email-field">Your Email</label>
-              <input type="email" id="email-field" formControlName="email" required />
+              <input
+                type="email"
+                id="email-field"
+                formControlName="email"
+                required
+              />
             </div>
-        
+
             <div class="form-group full-width">
               <label for="subject-field">Subject</label>
-              <input type="text" id="subject-field" formControlName="subject" required />
+              <input
+                type="text"
+                id="subject-field"
+                formControlName="subject"
+                required
+              />
             </div>
-        
+
             <div class="form-group full-width">
               <label for="message-field">Message</label>
-              <textarea id="message-field" rows="10" formControlName="message" required></textarea>
+              <textarea
+                id="message-field"
+                rows="10"
+                formControlName="message"
+                required
+              ></textarea>
             </div>
-        
+
             <div class="form-group full-width center">
               <div *ngIf="loading" class="loading">Loading...</div>
               <div *ngIf="error" class="error-message">{{ error }}</div>
@@ -77,7 +97,6 @@
             </div>
           </div>
         </form>
-        
       </div>
     </div>
   </div>

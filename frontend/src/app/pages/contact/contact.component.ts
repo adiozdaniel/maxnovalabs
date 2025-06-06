@@ -7,10 +7,11 @@ import {
 } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { SectionTitleComponent } from "../../shared/section-title/section-title.component";
 
 @Component({
   selector: 'app-contact',
-  imports: [ReactiveFormsModule, CommonModule, HttpClientModule],
+  imports: [ReactiveFormsModule, CommonModule, HttpClientModule, SectionTitleComponent],
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss'],
 })
