@@ -3,7 +3,7 @@
   text-align: center;
   padding: 4rem 2rem;
   overflow: hidden;
-  color: #fff;
+  color: var(--text-secondary-color);
 
   .testimonial-bg {
     position: absolute;
@@ -36,12 +36,17 @@
   }
 
   .testimonial-img {
+    display: table;
+    margin: 0 auto;
     width: 80px;
     height: 80px;
     border-radius: 50%;
     margin-bottom: 1rem;
     object-fit: cover;
-    border: 3px solid white;
+    border: 3px solid transparent;
+
+    border-image-source: var(--border-gradient);
+    border-image-slice: 1;
   }
 
   .testimonial-quote {
@@ -54,7 +59,6 @@
     font-weight: 700;
     margin-top: 1rem;
     font-size: 1.1rem;
-    color: #ff5722;
   }
 
   .testimonial-title {
@@ -72,20 +76,13 @@
       height: 14px;
       border-radius: 50%;
       border: none;
-      background-color: #bbb;
+      background-color: var(--text-color);
       cursor: pointer;
       transition: background-color 0.3s ease, transform 0.2s ease;
 
-      &:hover,
-      &:focus {
-        background-color: #4a90e2;
-        outline: none;
-        transform: scale(1.2);
-      }
-
       &.active {
-        background-color: #4a90e2;
-        box-shadow: 0 0 6px #4a90e2;
+        background-color: var(--color-body-bg);
+        box-shadow: 0 0 6px var(--color-body-bg);
         transform: scale(1.4);
         cursor: default;
       }
