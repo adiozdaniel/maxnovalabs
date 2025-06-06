@@ -40,7 +40,6 @@
   }
 }
 
-// Section Title takes full width
 app-section-title {
   width: 100%;
 }
@@ -51,21 +50,26 @@ app-section-title {
   .hero-title {
     font-size: 2rem;
     font-weight: 700;
-    color: var(--color-ink);
-    margin: 0 0 0.5rem;
+    color: var(--text-secondary-color);
+    margin: 0.5rem auto;
   }
 
   .hero-subtitle {
     font-size: 1.125rem;
     color: var(--text-color);
-    margin: 0;
+    margin: 1rem auto;
     max-width: 400px;
+  }
+
+  .hero-consultancy {
+    font-size: 2.5rem;
+    color: var(--button-hover-text);
   }
 }
 
-// Call‐to‐Action Button
 .btn-get-started {
   position: relative;
+  margin: 2rem auto;
   padding: 0.75rem 1.5rem;
   border-radius: 4px;
   width: 20rem;
