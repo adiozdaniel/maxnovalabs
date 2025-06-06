@@ -19,9 +19,9 @@
           y2="0.5"
           gradientUnits="objectBoundingBox"
         >
-          <stop offset="0%" stop-color="#0036a4" />
-          <stop offset="49%" stop-color="#6a2364" />
-          <stop offset="100%" stop-color="#4cceff" />
+          <stop offset="0%" stop-color="var(--text-color)" />
+          <stop offset="49%" stop-color="var(--text-secondary-color)" />
+          <stop offset="100%" stop-color="var(--button-hover-text)" />
         </linearGradient>
 
         <linearGradient
@@ -32,9 +32,9 @@
           y2="0.5"
           gradientUnits="objectBoundingBox"
         >
-          <stop offset="0%" stop-color="#ffffff" />
-          <stop offset="48%" stop-color="#359fad" />
-          <stop offset="100%" stop-color="#ffffff" />
+          <stop offset="0%" stop-color="var(--color-body-bg)" />
+          <stop offset="48%" stop-color="var(--button-bg)" />
+          <stop offset="100%" stop-color="var(--button-text)" />
         </linearGradient>
 
         <linearGradient
@@ -45,9 +45,9 @@
           y2="0.5"
           gradientUnits="objectBoundingBox"
         >
-          <stop offset="0%" stop-color="#ae3bd4" />
-          <stop offset="48%" stop-color="#2bc4c3" />
-          <stop offset="100%" stop-color="#ff00f6" />
+          <stop offset="0%" stop-color="var(--button-hover-bg)" />
+          <stop offset="48%" stop-color="var(--button-hover-text)" />
+          <stop offset="100%" stop-color="var(--text-color)" />
         </linearGradient>
 
         <radialGradient
@@ -58,8 +58,8 @@
           gradientUnits="objectBoundingBox"
           gradientTransform="translate(0.5, 0.5)"
         >
-          <stop offset="0%" stop-color="rgba(34,56,133,0.52)" />
-          <stop offset="100%" stop-color="rgba(255,176,195,0.77)" />
+          <stop offset="0%" stop-color="var(--color-dark-blue-900)" />
+          <stop offset="100%" stop-color="var(--color-fire)" />
         </radialGradient>
       </defs>
 
@@ -104,10 +104,12 @@
     </svg>
   </div>
 
-  <!-- Hero Section Content WITHOUT <app-section-title> -->
+  <!-- Hero Section Content-->
   <div class="hero-col" data-aos="zoom-out">
     <div class="hero-text">
-      <h2 class="hero-title">Innovate with MaxNovaLabs</h2>
+      <h2 class="hero-title">
+        NovaLabs <span class="hero-consultancy">Consultancy</span>
+      </h2>
       <p class="hero-subtitle">
         We craft cutting-edge solutions in web development, AI for healthcare,
         mobile apps, and startup growth.
