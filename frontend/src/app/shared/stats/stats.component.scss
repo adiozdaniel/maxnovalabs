@@ -1,3 +1,15 @@
+.stats-title{
+  display: inline-block;
+  margin-left: 50%;
+  padding: 0.1rem 0.3rem;
+  border-radius: 0.5rem;
+  background: var(--gradient-primary);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
 .container {
   text-align: center;
   margin: 2rem auto;
@@ -13,7 +25,7 @@
 
   .stat-item {
     flex: 0 1 240px;
-    background: #ffffff;
+    background: var(--gradient-primary);
     border-radius: 1rem;
     padding: 2rem 1.5rem;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
@@ -26,7 +38,8 @@
 
     i {
       font-size: 3rem;
-      color: #ff5722;
+      color: var(--button-bg);
+      margin-top: -1rem;
       margin-bottom: 1rem;
     }
 
@@ -35,13 +48,15 @@
         display: block;
         font-size: 2.5rem;
         font-weight: 700;
+        color: var(--button-hover-bg);
         transition: color 0.3s;
+        margin: 1rem;
       }
 
       p {
         margin-top: 0.5rem;
         font-size: 1.1rem;
-        color: #666;
+        color: var(--text-color);
       }
     }
   }
