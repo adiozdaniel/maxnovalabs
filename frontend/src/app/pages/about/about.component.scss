@@ -1,22 +1,3 @@
-.section-title {
-  text-align: center;
-  margin: 1rem auto;
-
-  p {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-  }
-
-  h2 {
-    font-size: 2.5rem;
-
-    .description-title {
-      margin-left: 0.5rem;
-      color: var(--button-hover-bg);
-    }
-  }
-}
-
 .about-content-wrapper {
   display: flex;
   flex-direction: column;
