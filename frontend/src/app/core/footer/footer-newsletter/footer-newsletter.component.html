@@ -1,10 +1,12 @@
 <div class="section-container footer-newsletter">
   <div>
-    <h2>Join Our Newsletter</h2>
-    <p>
-      Stay updated with the latest software development, AI, mobile apps, and
-      startup trends from MaxNovaLabs insights.
-    </p>
+    <app-section-title
+      titlePartOne="Join"
+      titlePartTwo="Our Newsletter"
+      subtitle="Stay updated with the latest software development, AI, mobile apps, and
+      startup trends from MaxNovaLabs insights."
+      alignment="center"
+    ></app-section-title>
 
     <form class="newsletter-form" (submit)="onSubscribe($event)">
       <input
@@ -17,7 +19,12 @@
       <button type="submit">Subscribe</button>
     </form>
 
-    <p class="message" *ngIf="message" [class.success]="success" [class.error]="!success">
+    <p
+      class="message"
+      *ngIf="message"
+      [class.success]="success"
+      [class.error]="!success"
+    >
       {{ message }}
     </p>
   </div>

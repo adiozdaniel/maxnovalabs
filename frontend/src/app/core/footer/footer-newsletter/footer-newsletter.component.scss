@@ -2,15 +2,6 @@
   padding: 2rem 1rem;
   text-align: center;
 
-  h2 {
-    margin-bottom: 0.5rem;
-    font-weight: 700;
-  }
-
-  p {
-    margin-bottom: 1rem;
-  }
-
   .newsletter-form {
     display: flex;
     justify-content: center;
@@ -52,22 +43,23 @@
   .message {
     margin-top: 1rem;
     font-weight: 500;
-  
+
     &.success {
       color: #2e7d32;
     }
-  
+
     &.error {
       color: #d32f2f;
     }
-  }  
+  }
 
   @media (max-width: 600px) {
     .newsletter-form {
       flex-direction: column;
       align-items: center;
 
-      input, button {
+      input,
+      button {
         width: 90%;
         border-radius: 0.5rem;
       }
