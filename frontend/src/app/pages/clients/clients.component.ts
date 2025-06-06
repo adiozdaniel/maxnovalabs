@@ -27,11 +27,11 @@ export class ClientsComponent {
   ];
 
   clientLogos: string[] = [
-    'img/clients/logo1.jpg',
-    'img/clients/logo2.jpg',
-    'img/clients/logo3.jpg',
-    'img/clients/logo4.jpg',
-    'img/clients/logo5.jpg',
-    'img/clients/logo6.jpg',
+    'img/clients/logo1.png',
+    'img/clients/logo2.png',
+    'img/clients/logo3.png',
+    'img/clients/logo4.png',
+    'img/clients/logo5.png',
+    'img/clients/logo6.png',
   ];
 }
