@@ -25,10 +25,10 @@
       a {
         text-decoration: none;
         font-size: 0.875rem;
-        color: #1f2937;
+        color: var(--text-color);
 
         &:hover {
-          color: #ff5722;
+          color: var(--color-fire);
         }
       }
     }
@@ -44,12 +44,12 @@
       padding: 6px 8px;
       border-radius: 4px;
       font-size: 1rem;
-      color: #1f2937;
-      border: #1f2937 1px solid;
+      color: var(--text-color);
+      border: var(--text-color) 1px solid;
 
       &:hover {
-        color: #ff5722;
-        border: #ff5722 1px solid;
+        color: var(--color-fire);
+        border: var(--color-fire) 1px solid;
       }
     }
   }
