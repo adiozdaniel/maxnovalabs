@@ -1,4 +1,4 @@
-<section id="featured-services" class="featured-services section-container">
+<section id="featured-services" class="section-container">
   <div class="container">
     <app-section-title
       titlePartOne="Our"
@@ -14,9 +14,6 @@
         [attr.data-aos]="'fade-up'"
         [attr.data-aos-delay]="(i + 1) * 100"
       >
-        <div class="icon">
-          <i [class]="service.icon"></i>
-        </div>
         <button
           type="button"
           class="stretched-link"
@@ -24,6 +21,10 @@
         >
           {{ service.title }}
         </button>
+
+        <div class="icon">
+          <i [class]="service.icon"></i>
+        </div>
 
         <p>{{ service.description }}</p>
       </div>
