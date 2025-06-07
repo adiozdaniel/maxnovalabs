@@ -1,5 +1,6 @@
 import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
 import { provideRouter, withInMemoryScrolling } from '@angular/router';
+import { provideHttpClient, withFetch } from '@angular/common/http';
 import { routes } from './app.routes';
 import {
   provideClientHydration,
@@ -10,6 +11,7 @@ import { AnchorNavigationService } from './services/navigation/anchor-navigation
 export const appConfig: ApplicationConfig = {
   providers: [
     AnchorNavigationService,
+    provideHttpClient(withFetch()),
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(
       routes,
