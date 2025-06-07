@@ -49,6 +49,21 @@
         position: relative;
         padding: 0.5rem;
 
+        &.active {
+          color: var(--button-hover-text);
+          font-weight: bold;
+
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background-color: var(--text-secondary-color);
+          }
+        }
+
         a,
         button {
           text-decoration: none;
@@ -59,26 +74,11 @@
           display: inline;
           outline: none;
           position: relative;
-          padding-bottom: 5px;
+          padding-bottom: 2px;
           color: var(--button-hover-text);
 
           &:hover {
             color: var(--text-secondary-color);
-          }
-
-          &.active {
-            color: var(--button-hover-text);
-            font-weight: bold;
-
-            &::after {
-              content: "";
-              position: absolute;
-              bottom: -5px;
-              left: 0;
-              width: 100%;
-              height: 2px;
-              background-color: var(--text-secondary-color);
-            }
           }
         }
 
@@ -96,6 +96,20 @@
             padding: 0.5rem 0;
 
             li {
+              &.active {
+                color: var(--button-hover-text);
+                font-weight: bold;
+
+                &::after {
+                  content: "";
+                  position: absolute;
+                  bottom: 2px;
+                  left: 1rem;
+                  width: calc(100% - 2rem);
+                  height: 2px;
+                  background-color: var(--text-secondary-color);
+                }
+              }
               a {
                 display: block;
                 padding: 0.5rem 1rem;
@@ -105,21 +119,6 @@
 
                 &:hover {
                   color: var(--text-secondary-color);
-                }
-
-                &.active {
-                  color: var(--button-hover-text);
-                  font-weight: bold;
-
-                  &::after {
-                    content: "";
-                    position: absolute;
-                    bottom: 2px;
-                    left: 1rem;
-                    width: calc(100% - 2rem);
-                    height: 2px;
-                    background-color: var(--text-secondary-color);
-                  }
                 }
               }
             }
