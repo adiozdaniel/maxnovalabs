@@ -29,14 +29,11 @@ export class ScrollSpyDirective implements AfterViewInit, OnDestroy {
   ngAfterViewInit() {
     if (!isPlatformBrowser(this.platformId)) return;
 
-    // Get ALL links within the host nav element
     const links = this.el.nativeElement.querySelectorAll('a');
     links.forEach((a: HTMLAnchorElement) => {
-      // Get fragment directly from Angular's binding
       const fragment =
         a.getAttribute('fragment') || a.getAttribute('ng-reflect-fragment');
 
-      // Fallback: extract from href
       if (!fragment) {
         const href = a.getAttribute('href') || '';
         const fragmentMatch = href.match(/#([a-z0-9-]+)$/i);
@@ -51,7 +48,6 @@ export class ScrollSpyDirective implements AfterViewInit, OnDestroy {
       }
     });
 
-    console.log('Valid sections:', this.validSections);
     this.ngZone.runOutsideAngular(() => this.initObserver());
   }
 
@@ -68,21 +64,17 @@ export class ScrollSpyDirective implements AfterViewInit, OnDestroy {
           const id = entry.target.id;
           if (id && this.validSections.has(id) && id !== this.lastEmitted) {
             this.lastEmitted = id;
-            console.log(`Emitting active section: ${id}`);
             this.ngZone.run(() => this.sectionChange.emit(id));
           }
         }
       });
     }, options);
 
-    // Observe all sections with IDs
     const sections = this.document.querySelectorAll<HTMLElement>('section[id]');
-    console.log(`Observing ${sections.length} sections`);
     sections.forEach((sec) => {
       this.observer?.observe(sec);
     });
 
-    // Immediately check visible sections
     this.checkVisibleSections();
   }
 
