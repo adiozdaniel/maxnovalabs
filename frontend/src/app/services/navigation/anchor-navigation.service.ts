@@ -14,15 +14,17 @@ export class AnchorNavigationService {
       this.router.events
         .pipe(filter((event) => event instanceof NavigationEnd))
         .subscribe(() => {
-          this.scrollToFragment();
+          this.handleNavigation();
         });
     }
   }
 
-  private scrollToFragment(): void {
+  private handleNavigation(): void {
     if (!isPlatformBrowser(this.platformId)) return;
 
-    const fragment = this.router.parseUrl(this.router.url).fragment;
+    const urlTree = this.router.parseUrl(this.router.url);
+    const fragment = urlTree.fragment;
+
     if (fragment) {
       setTimeout(() => {
         const element = this.document.getElementById(fragment);
@@ -32,7 +34,7 @@ export class AnchorNavigationService {
             block: 'start',
           });
         }
-      }, 100);
+      }, 300);
     }
   }
 }
