@@ -1,67 +1,43 @@
 <div class="main-nav">
-  <nav class="nav" aria-label="Main navigation">
+  <nav
+    appScrollSpy
+    (sectionChange)="onSectionChange($event)"
+    class="nav"
+    aria-label="Main navigation"
+  >
     <app-header-logo></app-header-logo>
     <ul class="nav-links">
-      <li>
-        <a
-          routerLink="/"
-          fragment="home"
-          routerLinkActive="active"
-          [routerLinkActiveOptions]="{ exact: true }"
-          >Home</a
-        >
+      <li [class.active]="activeSection === 'home'">
+        <a routerLink="/" fragment="home">Home</a>
       </li>
-      <li>
-        <a routerLink="/about" fragment="about" routerLinkActive="active"
-          >About</a
-        >
+      <li [class.active]="activeSection === 'about'">
+        <a routerLink="/about" fragment="about">About</a>
       </li>
-      <li>
-        <a routerLink="/services" fragment="services" routerLinkActive="active"
-          >Services</a
-        >
+      <li [class.active]="activeSection === 'services'">
+        <a routerLink="/services" fragment="services">Services</a>
       </li>
-      <li>
-        <a
-          routerLink="/portfolio"
-          fragment="portfolio"
-          routerLinkActive="active"
-          >Portfolio</a
-        >
+      <li [class.active]="activeSection === 'portfolio'">
+        <a routerLink="/portfolio" fragment="portfolio">Portfolio</a>
       </li>
-      <li>
-        <a routerLink="/team" fragment="team" routerLinkActive="active">Team</a>
+      <li [class.active]="activeSection === 'team'">
+        <a routerLink="/team" fragment="team">Team</a>
       </li>
-      <li class="dropdown">
+      <li class="dropdown" [class.active]="isDropdownActive()">
         <button aria-haspopup="true" aria-expanded="false">Industries</button>
         <ul class="dropdown-menu">
-          <li>
-            <a routerLink="/health" fragment="health" routerLinkActive="active"
-              >Health</a
-            >
+          <li [class.active]="activeSection === 'health'">
+            <a routerLink="/health" fragment="health">Health</a>
           </li>
-          <li>
-            <a
-              routerLink="/blockchain"
-              fragment="blockchain"
-              routerLinkActive="active"
-              >BlockChain</a
-            >
+          <li [class.active]="activeSection === 'blockchain'">
+            <a routerLink="/blockchain" fragment="blockchain">BlockChain</a>
           </li>
-          <li>
-            <a
-              routerLink="/e-commerce"
-              fragment="e-commerce"
-              routerLinkActive="active"
-              >E-Commerce</a
-            >
+          <li [class.active]="activeSection === 'e-commerce'">
+            <a routerLink="/e-commerce" fragment="e-commerce">E-Commerce</a>
           </li>
         </ul>
       </li>
-      <li>
-        <a routerLink="/contact" fragment="contact" routerLinkActive="active"
-          >Contact</a
-        >
+      <li [class.active]="activeSection === 'contact'">
+        <a routerLink="/contact" fragment="contact">Contact</a>
       </li>
     </ul>
   </nav>
