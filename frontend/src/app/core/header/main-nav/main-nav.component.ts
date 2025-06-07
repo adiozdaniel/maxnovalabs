@@ -7,13 +7,19 @@ import {
 } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { HeaderLogoComponent } from "../header-logo/header-logo.component";
+import { HeaderLogoComponent } from '../header-logo/header-logo.component';
 import { RouterLink, RouterLinkActive, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-main-nav',
   standalone: true,
-  imports: [CommonModule, HeaderLogoComponent, RouterModule, RouterLink, RouterLinkActive],
+  imports: [
+    CommonModule,
+    HeaderLogoComponent,
+    RouterModule,
+    RouterLink,
+    RouterLinkActive,
+  ],
   templateUrl: './main-nav.component.html',
   styleUrls: ['./main-nav.component.scss'],
 })
@@ -84,7 +90,7 @@ export class MainNavComponent implements OnInit, OnDestroy {
     this.isDark = !this.isDark;
     this.applyTheme(this.isDark);
     this.backendHasPreference = true;
-    
+
     this.http
       .post('/api/theme', { theme: this.isDark ? 'dark' : 'light' })
       .subscribe({
