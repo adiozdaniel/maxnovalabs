@@ -1,0 +1,31 @@
+/* ==================== */
+/*    DARK THEME        */
+/* ==================== */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    // Text and Background flips
+    --text-color: var(--color-paper);
+    --text-secondary-color: var(--color-paper);
+    --color-body-bg: var(--color-dark-blue-900);
+    --button-bg: var(--color-fire);
+    --button-text: var(--color-ink);
+    --button-hover-bg: var(--color-ink);
+    --button-hover-text: var(--color-fire);
+
+    // Dark theme gradient adjustments
+    --gradient-dark-opacity-top: 0.8;
+    --gradient-dark-opacity-mid: 0.9;
+    --gradient-dark-opacity-bottom: 0.8;
+
+    --gradient-primary: radial-gradient(
+      ellipse at center,
+      rgba(var(--color-fire-rgb), var(--gradient-dark-opacity-top)) 0%,
+      rgba(var(--color-ink-rgb), var(--gradient-dark-opacity-mid)) 40%,
+      rgba(var(--color-dark-blue-900-rgb), var(--gradient-dark-opacity-bottom))
+        100%
+    );
+
+    background-blend-mode: soft-light;
+  }
+}

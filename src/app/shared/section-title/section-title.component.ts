@@ -9,7 +9,8 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./section-title.component.scss'],
 })
 export class SectionTitleComponent {
-  @Input() title = '';
+  @Input() titlePartOne = '';
+  @Input() titlePartTwo = '';
   @Input() subtitle = '';
   @Input() alignment: 'left' | 'center' | 'right' = 'center';
 }

@@ -1,7 +1,8 @@
-<section id="featured-services" class="featured-services section">
+<section id="featured-services" class="section-container">
   <div class="container">
     <app-section-title
-      title="Our Services"
+      titlePartOne="Our"
+      titlePartTwo="Services"
       subtitle="We offer a range of services that cater to your business needs, from innovative AI solutions to cloud infrastructure management."
       alignment="center"
     ></app-section-title>
@@ -13,9 +14,6 @@
         [attr.data-aos]="'fade-up'"
         [attr.data-aos-delay]="(i + 1) * 100"
       >
-        <div class="icon">
-          <i [class]="service.icon"></i>
-        </div>
         <button
           type="button"
           class="stretched-link"
@@ -23,6 +21,10 @@
         >
           {{ service.title }}
         </button>
+
+        <div class="icon">
+          <i [class]="service.icon"></i>
+        </div>
 
         <p>{{ service.description }}</p>
       </div>
