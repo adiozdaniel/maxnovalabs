@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
-import { Header } from "./shared/components/header/header";
+import { Header } from "./shared/header/header";
 import { CommonModule } from '@angular/common';
 import { filter } from 'rxjs';
-import { Footer } from "./shared/components/footer/footer";
+import { Footer } from "./shared/footer/footer";
 
 @Component({
   selector: 'app-root',
