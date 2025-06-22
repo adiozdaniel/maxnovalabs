@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SectionTitle } from "../../section-title/section-title";
+import { SectionTitle } from '../../section-title/section-title';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
@@ -7,7 +7,7 @@ import { CommonModule } from '@angular/common';
   selector: 'app-footer-newsletter',
   imports: [SectionTitle, FormsModule, CommonModule],
   templateUrl: './footer-newsletter.html',
-  styleUrl: './footer-newsletter.scss',
+  styleUrls: ['./footer-newsletter.scss'],
 })
 export class FooterNewsletter {
   email = '';
