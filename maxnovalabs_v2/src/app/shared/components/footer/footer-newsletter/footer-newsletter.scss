@@ -1,0 +1,72 @@
+.footer-newsletter {
+  padding: 2rem 1rem;
+  text-align: center;
+
+  .newsletter-form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    input {
+      padding: 0.5rem 1rem;
+      width: 350px;
+      max-width: 100%;
+      border: 1px solid var(--button-bg);
+      border-radius: 0.5rem 0 0 0.5rem;
+      outline: none;
+
+      &:focus {
+        border-color: var(--button-bg);
+        box-shadow: 0 0 0 2px rgba(255, 87, 34, 0.2);
+      }
+    }
+
+    button {
+      border-radius: 0 0.5rem 0.5rem 0;
+      background-color: var(--button-bg);
+      font-weight: 900;
+      border: none;
+      color: var(--button-hover-bg);
+      padding: 0.5rem 1rem;
+      margin-left: -8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: var(--button-hover-bg);
+        color: var(--text-color);
+      }
+    }
+  }
+
+  .message {
+    margin-top: 1rem;
+    font-weight: 500;
+
+    &.success {
+      color: #2e7d32;
+    }
+
+    &.error {
+      color: #d32f2f;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .newsletter-form {
+      flex-direction: column;
+      align-items: center;
+
+      input,
+      button {
+        width: 90%;
+        border-radius: 0.5rem;
+      }
+
+      input {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}
