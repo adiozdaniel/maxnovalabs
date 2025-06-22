@@ -1,0 +1,39 @@
+<div class="main-nav">
+  <nav class="nav" aria-label="Main navigation">
+    <app-header-logo></app-header-logo>
+    <ul class="nav-links">
+      <li [class.active]="activeSection === 'home'">
+        <a routerLink="/">Home</a>
+      </li>
+      <li [class.active]="activeSection === 'about'">
+        <a routerLink="/about">About</a>
+      </li>
+      <li [class.active]="activeSection === 'services'">
+        <a routerLink="/services">Services</a>
+      </li>
+      <li [class.active]="activeSection === 'portfolio'">
+        <a routerLink="/portfolio">Portfolio</a>
+      </li>
+      <li [class.active]="activeSection === 'team'">
+        <a routerLink="/team">Team</a>
+      </li>
+      <li class="dropdown" [class.active]="isDropdownActive()">
+        <button aria-haspopup="true" aria-expanded="false">Industries</button>
+        <ul class="dropdown-menu">
+          <li [class.active]="activeSection === 'health'">
+            <a routerLink="/health">Health</a>
+          </li>
+          <li [class.active]="activeSection === 'blockchain'">
+            <a routerLink="/blockchain">BlockChain</a>
+          </li>
+          <li [class.active]="activeSection === 'e-commerce'">
+            <a routerLink="/e-commerce">E-Commerce</a>
+          </li>
+        </ul>
+      </li>
+      <li [class.active]="activeSection === 'contact'">
+        <a routerLink="/contact">Contact</a>
+      </li>
+    </ul>
+  </nav>
+</div>
