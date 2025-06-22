@@ -1,11 +1,28 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
+import { Header } from "./shared/components/header/header";
+import { CommonModule } from '@angular/common';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [CommonModule, RouterOutlet, Header],
   templateUrl: './app.html',
 })
 export class App {
-  protected title = 'maxnovalabs_v2';
+  showHeader = true;
+
+  constructor(private router: Router) {
+    this.router.events
+      .pipe(filter((event) => event instanceof NavigationEnd))
+      .subscribe((event: NavigationEnd) => {
+        this.checkHeaderVisibility(event.url);
+      });
+  }
+
+  checkHeaderVisibility(url: string): void {
+    const noHeaderRoutes = ['/login', '/register'];
+
+    this.showHeader = !noHeaderRoutes.some((route) => url.startsWith(route));
+  }
 }
