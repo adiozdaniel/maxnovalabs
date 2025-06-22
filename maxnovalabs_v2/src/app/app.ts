@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
-import { Header } from "./shared/header/header";
+import { Header } from './shared/header/header';
 import { CommonModule } from '@angular/common';
 import { filter } from 'rxjs';
-import { Footer } from "./shared/footer/footer";
+import { Footer } from './shared/footer/footer';
+import { PreLoader } from './shared/loaders/pre-loader/pre-loader';
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, RouterOutlet, Header, Footer],
+  imports: [CommonModule, RouterOutlet, Header, Footer, PreLoader],
   templateUrl: './app.html',
 })
 export class App {
