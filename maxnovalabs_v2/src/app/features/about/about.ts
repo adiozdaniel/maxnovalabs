@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { SectionTitle } from '../../shared/section-title/section-title';
-import { fadeUp } from '../../shared/animations/fadeUp.animations';
+import { fadeUp } from '../../core/animations/fadeUp.animations';
 
 @Component({
   selector: 'app-about',
