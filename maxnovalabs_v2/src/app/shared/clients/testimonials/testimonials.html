@@ -1,0 +1,31 @@
+<section class="testimonial-section">
+  <img src="img/testimonials/bg.jpg" alt="bg" class="testimonial-bg" />
+  <div class="testimonial-overlay"></div>
+  <div class="testimonial-wrapper" *ngIf="testimonials.length > 0">
+    <div class="testimonial" *ngIf="testimonials[currentIndex]">
+      <img
+        *ngIf="testimonials[currentIndex].image"
+        [src]="testimonials[currentIndex].image"
+        [alt]="testimonials[currentIndex].name"
+        class="testimonial-img"
+      />
+      <blockquote class="testimonial-quote">
+        “{{ testimonials[currentIndex].quote }}”
+      </blockquote>
+      <p class="testimonial-name">{{ testimonials[currentIndex].name }}</p>
+      <small class="testimonial-title">{{
+        testimonials[currentIndex].title
+      }}</small>
+    </div>
+
+    <!-- Dot navigation -->
+    <div class="testimonial-controls" *ngIf="testimonials.length > 1">
+      <button
+        *ngFor="let t of testimonials; let i = index"
+        [class.active]="i === currentIndex"
+        (click)="currentIndex = i"
+        attr.aria-label="Show testimonial {{ i + 1 }}"
+      ></button>
+    </div>
+  </div>
+</section>
