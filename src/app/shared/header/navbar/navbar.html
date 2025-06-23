@@ -18,7 +18,7 @@
         <a routerLink="/team">Team</a>
       </li> -->
       <li class="dropdown" [class.active]="isDropdownActive()">
-        <button aria-haspopup="true" aria-expanded="false">Industries</button>
+        <button aria-haspopup="true" [attr.aria-expanded]="isDropdownActive()">Industries</button>
         <ul class="dropdown-menu">
           <li [class.active]="activeSection === 'health'">
             <a routerLink="/health">Health</a>
