@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { fadeUp } from '../../../shared/animations/fadeUp.animations';
+import { fadeUp } from '../../../core/animations/fadeUp.animations';
 
 @Component({
   selector: 'app-hero',
