@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
-import { fadeUp } from '../../shared/animations/fadeUp.animations';
+import { Hero } from "./hero/hero";
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.html',
-  styleUrls: ['./home.scss'],
-  animations: [fadeUp],
+  imports: [Hero],
 })
 export class Home {}
