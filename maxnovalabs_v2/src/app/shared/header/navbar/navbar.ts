@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { HeaderLogo } from '../header-logo/header-logo';
-import { Router, NavigationEnd } from '@angular/router';
+import { Router, NavigationEnd, RouterModule } from '@angular/router';
 import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-navbar',
-  imports: [HeaderLogo],
+  imports: [HeaderLogo, RouterModule],
   templateUrl: './navbar.html',
   styleUrls: ['./navbar.scss'],
 })
