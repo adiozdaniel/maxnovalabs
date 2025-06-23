@@ -1,0 +1,43 @@
+<section id="portfolio" class="section-container">
+  <!-- Portfolio Header -->
+  <app-section-title
+    titlePartOne="Our"
+    titlePartTwo="Portfolio"
+    alignment="center"
+    subtitle="Explore our latest projects across AI, cloud, and healthcare innovation."
+    alignment="center"
+  ></app-section-title>
+
+  <!-- Portfolio Items -->
+  <div class="portfolio-container" [@fadeUp]="{ value: '', params: { delay: 100 } }">
+    <div class="portfolio-item">
+      <div class="portfolio-wrap">
+        <img src="img/portfolio/app-1.jpg" alt="AI Diagnostic Platform" />
+        <div class="portfolio-info">
+          <h4 data-text="AI Diagnostic Platform">AI Diagnostic Platform</h4>
+          <p>Healthcare | TensorFlow | AWS</p>
+          <div class="portfolio-links">
+            <a href="#" title="View Full Image">+</a>
+            <a href="#" title="More Details">🔗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-item">
+      <div class="portfolio-wrap">
+        <img src="img/portfolio/app-2.jpg" alt="AI Mobile Interface" />
+        <div class="portfolio-info">
+          <h4 data-text="AI Mobile Interface">AI Mobile Interface</h4>
+          <p>UX Design | Android | Real-time AI</p>
+          <div class="portfolio-links">
+            <a href="#" title="View Full Image">+</a>
+            <a href="#" title="More Details">🔗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TODO: Add more items -->
+  </div>
+</section>
