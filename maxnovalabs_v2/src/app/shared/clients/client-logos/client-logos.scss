@@ -1,0 +1,40 @@
+.logos-carousel {
+  overflow: hidden;
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.logos-track {
+  display: flex;
+  width: calc(200%); /* duplicated content for seamless loop */
+  animation: scrollLogos 20s linear infinite;
+}
+
+.logo-item {
+  flex: 0 0 auto;
+  width: 150px;
+  margin: 0 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-item img {
+  max-width: 60%;
+  height: auto;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.logo-item img:hover {
+  opacity: 1;
+}
+
+@keyframes scrollLogos {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
