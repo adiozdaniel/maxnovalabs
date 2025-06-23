@@ -4,7 +4,7 @@ import { SectionTitleComponent } from '../../shared/section-title/section-title.
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [SectionTitleComponent],
+  // imports: [SectionTitleComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })

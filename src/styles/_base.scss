@@ -1,0 +1,25 @@
+/* ==================== */
+/*      BASE STYLES     */
+/* ==================== */
+@use "variables" as v;
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: var(--font-family);
+  line-height: var(--line-height-base);
+  color: var(--text-color);
+  background-color: var(--color-paper);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Selection styles */
+::selection {
+  background-color: var(--color-fire);
+  color: var(--color-paper);
+}

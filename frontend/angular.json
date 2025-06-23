@@ -30,7 +30,7 @@
               }
             ],
             "styles": [
-              "src/styles.scss",
+              "src/styles/styles.scss",
               "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
             ],
             "scripts": [],
@@ -66,6 +66,13 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "allowedHosts": [
+              "44e1-41-90-65-73.ngrok-free.app",
+              ".ngrok-free.app"
+            ],
+            "host": "0.0.0.0"
+          },
           "configurations": {
             "production": {
               "buildTarget": "maxnovalabs-frontend:build:production"
@@ -91,7 +98,7 @@
                 "input": "public"
               }
             ],
-            "styles": ["src/styles.scss"],
+            "styles": ["src/styles/styles.scss"],
             "scripts": []
           }
         }
